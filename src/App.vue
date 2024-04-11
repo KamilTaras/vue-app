@@ -1,17 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <top-navbar></top-navbar> <!-- Use kebab-case for HTML tags -->
+    <snippet-form></snippet-form>
+    <!-- Your other components will follow here -->
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TopNavbar from './components/TopNavbar.vue';
+import SnippetForm from './components/SnippetForm.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TopNavbar, // Use PascalCase for JavaScript component registration
+    SnippetForm
   }
-}
+};
 </script>
 
 <style>
