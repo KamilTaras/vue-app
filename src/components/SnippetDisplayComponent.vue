@@ -1,15 +1,21 @@
 <template>
-    <div v-if="selectedFile">
-      <pre><code>{{ selectedFile.code }}</code></pre>
-      <!-- Iterate through lines of code, making each line clickable for comments -->
-      <!-- Apply syntax highlighting using a third-party library -->
+    <div>
+      <code-display :code="selectedFile.code"></code-display>
+      <comment-section></comment-section>
     </div>
   </template>
   
   <script>
+  import CodeDisplay from './CodeDisplay.vue';
+  import CommentSection from './CommentSection.vue';
+  
   export default {
+    components: {
+      CodeDisplay,
+      CommentSection
+    },
     props: {
-      selectedFile: Object,
+      selectedFile: Object, // Make sure you pass this prop from parent component
     },
   };
   </script>

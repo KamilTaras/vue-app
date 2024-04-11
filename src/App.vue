@@ -1,24 +1,20 @@
 <template>
   <div id="app">
-    <top-navbar></top-navbar> <!-- Use kebab-case for HTML tags -->
-    <snippet-form></snippet-form>
-    <!-- Your other components will follow here -->
+    <top-navbar></top-navbar>
+    <router-view></router-view> <!-- This will display components based on the route -->
   </div>
 </template>
 
 <script>
 import TopNavbar from './components/TopNavbar.vue';
-import SnippetForm from './components/SnippetForm.vue';
 
 export default {
   name: 'App',
   components: {
-    TopNavbar, // Use PascalCase for JavaScript component registration
-    SnippetForm
+    TopNavbar
   }
 };
 </script>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
